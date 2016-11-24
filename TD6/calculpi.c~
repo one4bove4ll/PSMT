@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <pthread.h>
+#include <sys/time.h>
+
+
+int main() { 
+  timeval begin ;
+  timeval end ;
+  gettimeofday(&begin);
+
+ 
+  int i ;
+  int randval ;
+
+  for (i = 0 ; i < 10 ; i ++){
+    
+    randval = rand();
+    printf("%d \n",randval);
+
+  }
+
+  int j = RAND_MAX ;
+  printf("Plus grand rand : %d \n",j);
+
+
+
+  pthread_exit(NULL);
+  gettimeofday(&end);
+  timeval exec = end-begin ;
+
+  return 0 ;
+
+
+}
