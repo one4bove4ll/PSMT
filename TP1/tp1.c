@@ -1,3 +1,4 @@
+
 //rpasqua@laas.fr
 
 #include <stdio.h>
@@ -48,6 +49,7 @@ void proc_pere(int pid){
 	sleep(10);
 	printf("(pere) : On envoie le signal 17 \n");
 	kill(pid,10);
+	kill(pid,17);
 	while(1){}
 }
 

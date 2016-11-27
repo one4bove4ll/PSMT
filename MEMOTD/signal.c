@@ -6,10 +6,10 @@
 
 void handler (int signum){
 	switch (signum) {
-		case SIGUSR2 : printf("Signal SIGUSR2 recu \n");
-		case SIGUSR1 : printf("Signal SIGUSR1 recu \n");
+		case SIGUSR2 : printf("Signal SIGUSR2 recu \n"); break ;
+		case SIGUSR1 : printf("Signal SIGUSR1 recu \n"); break ;
 					pthread_exit(NULL);
-		default : NULL ;
+		default : break ; 
 	}
 }
 
